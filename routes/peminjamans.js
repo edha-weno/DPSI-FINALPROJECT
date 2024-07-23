@@ -27,6 +27,7 @@ router.get('/r', async (req, res, next) => {
     }
 });
 
+//untuk dilakukan pembatasan hack supaya hanya admin dan user dan admin yang dapat mengakses
 router.get('/',authenticate, authorize(['admin','user']), async (req, res, next) => {
     try {
         const Fasilitass = await Peminjaman.findAll();
@@ -46,7 +47,7 @@ router.post('/',  authenticate, authorize(['admin','user']), async (req, res, ne
     }
 });
 
-router.put('/:peminjamanID', authenticate, async (req, res, next) => {
+router.put('/:peminjamanID', authenticate,authorize(['admin','user']), async (req, res, next) => {
     try {
         const { userID, gedungID, ruanganID, tanggal } = req.body;
         const Peminjamans = await Peminjaman.findByPk(req.params.peminjamanID);
@@ -65,7 +66,7 @@ router.put('/:peminjamanID', authenticate, async (req, res, next) => {
         }
    });
 
-router.delete('/:peminjamanID', authenticate, async (req, res, next) => {
+router.delete('/:peminjamanID', authenticate,authorize(['admin','user']), async (req, res, next) => {
     try {
         const Peminjamans = await Peminjaman.findByPk(req.params.peminjamanID);
         if (Peminjamans) {
