@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "c360b71b-c1aa-4473-842b-ef25953d6401",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36583903"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"admin\",\r\n    \"role\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app//auth/register",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app//auth/login",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post gedung",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTQ4NjgsImV4cCI6MTcyMTcxODQ2OH0.nvrDq40kQCNQ3yPMiuSIEJZ7-7JwEIwTX_GzoAucQk8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaGedung\" : \"A\", \"alamatGedung\" : \"jalan jalan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app//gedung",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"gedung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get gedung",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTQ4NjgsImV4cCI6MTcyMTcxODQ2OH0.nvrDq40kQCNQ3yPMiuSIEJZ7-7JwEIwTX_GzoAucQk8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://edha-jmsmu2cig-edhas-projects.vercel.app/gedung",
+					"protocol": "https",
+					"host": [
+						"edha-jmsmu2cig-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"gedung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up gedung",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTQ4NjgsImV4cCI6MTcyMTcxODQ2OH0.nvrDq40kQCNQ3yPMiuSIEJZ7-7JwEIwTX_GzoAucQk8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaGedung\" : \"C\", \"alamatGedung\" : \"jalan jalan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app//gedung/2:gedungID",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"gedung",
+						"2:gedungID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del gedung",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTQ4NjgsImV4cCI6MTcyMTcxODQ2OH0.nvrDq40kQCNQ3yPMiuSIEJZ7-7JwEIwTX_GzoAucQk8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app//gedung/4:gedungID",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"gedung",
+						"4:gedungID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post ruangan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTIzNjQsImV4cCI6MTcyMTcxNTk2NH0.LRosbAaWjH1-q6gW21FkL7EASiFygbYwDgC1Q6YriZo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaRuangan\" : \"FTI\", \"gedungID\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app//ruangan",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"ruangan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ruangan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTQ4NjgsImV4cCI6MTcyMTcxODQ2OH0.nvrDq40kQCNQ3yPMiuSIEJZ7-7JwEIwTX_GzoAucQk8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app//ruangan",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"ruangan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up ruangan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTIzNjQsImV4cCI6MTcyMTcxNTk2NH0.LRosbAaWjH1-q6gW21FkL7EASiFygbYwDgC1Q6YriZo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaRuangan\" : \"KPO\", \"gedungID\" : 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app//ruangan/10:ruanganID",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"ruangan",
+						"10:ruanganID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del ruangan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTQ4NjgsImV4cCI6MTcyMTcxODQ2OH0.nvrDq40kQCNQ3yPMiuSIEJZ7-7JwEIwTX_GzoAucQk8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app//ruangan/6:ruanganID",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"ruangan",
+						"6:ruanganID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post fasilitas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTIzNjQsImV4cCI6MTcyMTcxNTk2NH0.LRosbAaWjH1-q6gW21FkL7EASiFygbYwDgC1Q6YriZo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ruanganID\" : 8,\r\n    \"namaFasilitas\" : \"lcd\", \r\n    \"deskripsi\" : \"proyektor dan lcd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app/fasilitas",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"fasilitas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get fasilitas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTUyOTgsImV4cCI6MTcyMTcxODg5OH0.e8bwwkdDvNx4e5geop-YNFCKdiIAZeVDMrA7WSm50oQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app/fasilitas",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"fasilitas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up fasilitas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTUyOTgsImV4cCI6MTcyMTcxODg5OH0.e8bwwkdDvNx4e5geop-YNFCKdiIAZeVDMrA7WSm50oQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ruanganID\" : 8,\r\n    \"namaFasilitas\" : \"lcd\", \r\n    \"deskripsi\" : \"proyektor, lcd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app/fasilitas/2:fasilitasID",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"fasilitas",
+						"2:fasilitasID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del fasilitas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTUyOTgsImV4cCI6MTcyMTcxODg5OH0.e8bwwkdDvNx4e5geop-YNFCKdiIAZeVDMrA7WSm50oQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app/fasilitas/2:fasilitasID",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"fasilitas",
+						"2:fasilitasID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post pinjam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTUyOTgsImV4cCI6MTcyMTcxODg5OH0.e8bwwkdDvNx4e5geop-YNFCKdiIAZeVDMrA7WSm50oQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\" : 4, \"gedungID\" : 3, \"ruanganID\" : 9, \"tanggal\" : \"20 Juli 2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app/peminjaman",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"peminjaman"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get pinjam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTUyOTgsImV4cCI6MTcyMTcxODg5OH0.e8bwwkdDvNx4e5geop-YNFCKdiIAZeVDMrA7WSm50oQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app/peminjaman",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"peminjaman"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up pinjam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTUyOTgsImV4cCI6MTcyMTcxODg5OH0.e8bwwkdDvNx4e5geop-YNFCKdiIAZeVDMrA7WSm50oQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\" : 2, \"gedungID\" : 3, \"ruanganID\" : 7, \"tanggal\" : \"21 Juli 2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edha-nxthx6the-edhas-projects.vercel.app/peminjaman/2:peminjamanID",
+					"protocol": "https",
+					"host": [
+						"edha-nxthx6the-edhas-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"peminjaman",
+						"2:peminjamanID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del pinjam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTcyMTY5MzcyNSwiZXhwIjoxNzIxNjk3MzI1fQ.IiSkA8ea8PDPbsAOFW-N45dC1G7-6g3PAlH1tQ2ucfg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/peminjaman/2:peminjamanID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"peminjaman",
+						"2:peminjamanID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get guest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/peminjaman/r",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"peminjaman",
+						"r"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
