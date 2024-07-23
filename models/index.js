@@ -1,5 +1,7 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();  // Muat variabel lingkungan dari .env
+// Fix "Please install mysql2 package manually".
+const mysql2 = require('mysql2');
 
 // Konfigurasi koneksi Sequelize
 const sequelize = new Sequelize(
